@@ -1,0 +1,17 @@
+Write a function called "is_alphabetic" that will determine if the letters in a word are in alphabetical order,
+returning true or false. Passing a parameter of "best" should evaluate to true, while "patrick" would be false. 
+Remember that you can compare two individual characters, so "'a' < 'b'" would be true. 
+Also remember that a function will stop as soon as you return a value, skipping any subsequent code.
+
+function is_alphabetic(in_str)
+
+  declare counter
+  declare sortida = True
+  
+  for counter from 1 to in_str.length-1 loop
+    if in_str.at(counter) > in_str.at(counter+1) then
+      return sortida = False
+    end-if  
+   end loop
+
+end function
