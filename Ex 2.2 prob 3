@@ -1,0 +1,19 @@
+Write a function that takes a number parameter and finds the value of that position in the Fibbonacci Sequence. 
+In the Fibonacci Sequence, the next number is determined by adding the previous two numbers together. 
+Positions one and two are both 1, to start the sequence. Position three is 1 (position one) + 1 (position two), so 2. 
+Item four is 1 + 2, or 3. Then 5, 8, 13, 21, and so forth. "fib(2)" should return 1, and "fib(6)" should return 8.
+
+function fib(in_num)
+  declare counter
+  declare fib_out = 1
+  declare fib1 = 0
+  declare fib2 = 1
+  
+  for counter from 1 to in_num loop
+    fib_out = fib1 + fib2
+    fib1 = fib2
+    fib2 = fib_out
+  end loop
+
+  return fib_out
+end function
