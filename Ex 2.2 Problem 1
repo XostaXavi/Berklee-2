@@ -1,0 +1,32 @@
+Problem 1
+
+A palindrome is a word or sentence that is the same when written forwards or backwards.
+Write a function that will determine if the input string is a palindrome. 
+Don't worry about dealing with upper and lower case letters or punctuation. 
+"Abba" isn't a palindrome for the purposes of this question, but "ABBA" is.
+
+'utilitzem la funció que dona la volta a un string que posa com exemple la teoria
+
+function reverse_string(in_str)
+  declare counter
+  declare reversed = ""
+    
+  for counter from 1 to in_str.length loop
+    reversed = in_str.at(counter) + reversed
+  end loop
+
+  return reversed
+end function
+
+'utilitzem la funció descrita adalt
+declare paraulaInici
+declare paraulaFinal
+
+paraulaInici = read_input
+paraulaFinal = reverse_string(paraulaInici)
+
+if paraulaInici = paraulaFinal
+  print paraulaInici + " Yes, it was a palindrome"
+else
+  print paraulaInici + " It is not a palindrome"
+end-if
